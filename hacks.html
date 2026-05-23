@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garage Hacks | Togos Vintage Garage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hacks.css">
+</head>
+<body>
+  <header class="site-header hacks-header" data-elevated="true">
+    <a class="brand" href="index.html" aria-label="Togos Vintage Garage home">
+      <span class="brand-mark" aria-hidden="true">TV</span>
+      <span>Togos Vintage Garage</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#community">Community</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="hacks.html">Hacks</a>
+      <a href="maps.html">Maps</a>
+      <a href="index.html#planner">Planner</a>
+      <a href="index.html#hub">Hub</a>
+      <a href="features.html">Features</a>
+    </nav>
+    <a class="nav-cta" href="index.html">Open site</a>
+  </header>
+
+  <main class="hacks-main">
+    <section class="hacks-hero" aria-labelledby="hacks-title">
+      <div>
+        <p class="eyebrow">Garage hacks</p>
+        <h1 id="hacks-title">How-to videos, photos, and clever workshop tricks</h1>
+        <p>Share practical motor-fanatic hacks: safe tool setups, temporary fixtures, measuring tricks, cleaning methods, grinder jigs, parts organization, and clever ways to solve old-machine problems.</p>
+      </div>
+      <div class="hack-warning">
+        <strong>Safety first</strong>
+        <span>Every hack needs a risk note, protective gear, and a safer alternative when possible.</span>
+      </div>
+    </section>
+
+    <section class="hack-controls" aria-label="Hack filters">
+      <button class="hack-filter active" type="button" data-hack-filter="all">All</button>
+      <button class="hack-filter" type="button" data-hack-filter="Tool hack">Tool hacks</button>
+      <button class="hack-filter" type="button" data-hack-filter="Video">Videos</button>
+      <button class="hack-filter" type="button" data-hack-filter="Photo guide">Photo guides</button>
+      <button class="hack-filter" type="button" data-hack-filter="Safety">Safety</button>
+      <button class="hack-filter" type="button" data-hack-filter="Parts">Parts</button>
+    </section>
+
+    <section class="hacks-layout">
+      <div class="hack-feed" id="hack-feed" aria-live="polite"></div>
+      <aside class="hack-detail" id="hack-detail" aria-live="polite"></aside>
+    </section>
+
+    <section class="submit-hack" aria-labelledby="submit-hack-title">
+      <div class="section-heading">
+        <p class="eyebrow">Contribute</p>
+        <h2 id="submit-hack-title">Submit a garage hack</h2>
+      </div>
+      <form class="hack-form" id="hack-form">
+        <label>
+          <span>Hack title</span>
+          <input id="hack-title-input" type="text" placeholder="Example: grinder stand for polishing small brackets" maxlength="80">
+        </label>
+        <label>
+          <span>Category</span>
+          <select id="hack-category-input">
+            <option value="Tool hack">Tool hack</option>
+            <option value="Video">Video</option>
+            <option value="Photo guide">Photo guide</option>
+            <option value="Safety">Safety</option>
+            <option value="Parts">Parts</option>
+          </select>
+        </label>
+        <label>
+          <span>Risk note</span>
+          <textarea id="hack-risk-input" placeholder="What can go wrong and how should members stay safe?"></textarea>
+        </label>
+        <button type="submit">Add hack idea</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="hacks.js"></script>
+</body>
+</html>

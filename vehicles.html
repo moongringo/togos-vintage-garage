@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Registry | Togos Vintage Garage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="vehicles.css">
+</head>
+<body>
+  <header class="site-header vehicles-header" data-elevated="true">
+    <a class="brand" href="index.html" aria-label="Togos Vintage Garage home">
+      <span class="brand-mark" aria-hidden="true">TV</span>
+      <span>Togos Vintage Garage</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#community">Community</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="hacks.html">Hacks</a>
+      <a href="maps.html">Maps</a>
+      <a href="index.html#planner">Planner</a>
+      <a href="index.html#hub">Hub</a>
+      <a href="features.html">Features</a>
+    </nav>
+    <a class="nav-cta" href="index.html">Open site</a>
+  </header>
+
+  <main class="vehicles-main">
+    <section class="vehicles-hero" aria-labelledby="vehicles-title">
+      <div>
+        <p class="eyebrow">Vehicle registry</p>
+        <h1 id="vehicles-title">Browse every era, then open the machine file</h1>
+        <p>View all vehicles or filter from before 1920s onward by decade. Each machine gets a health passport, provenance timeline, receipts vault, route ratings, marketplace notes, tool map, mentor circles, and future AI part identification.</p>
+      </div>
+      <div class="registry-stats">
+        <strong id="vehicle-count">12 vehicles</strong>
+        <span>9 eras</span>
+        <span>34 receipts</span>
+        <span>18 route notes</span>
+      </div>
+    </section>
+
+    <section class="era-filter-bar" aria-label="Vehicle era filters">
+      <button class="era-filter active" type="button" data-era="all">All</button>
+      <button class="era-filter" type="button" data-era="pre1920">Before 1920s</button>
+      <button class="era-filter" type="button" data-era="1920s">1920s</button>
+      <button class="era-filter" type="button" data-era="1930s">1930s</button>
+      <button class="era-filter" type="button" data-era="1940s">1940s</button>
+      <button class="era-filter" type="button" data-era="1950s">1950s</button>
+      <button class="era-filter" type="button" data-era="1960s">1960s</button>
+      <button class="era-filter" type="button" data-era="1970s">1970s</button>
+      <button class="era-filter" type="button" data-era="1980s">1980s</button>
+      <button class="era-filter" type="button" data-era="1990s">1990s</button>
+      <button class="era-filter" type="button" data-era="2000s">2000s</button>
+      <button class="era-filter" type="button" data-era="2010s">2010s</button>
+      <button class="era-filter" type="button" data-era="2020s">2020s</button>
+    </section>
+
+    <section class="vehicle-layout" aria-label="Vehicle registry browser">
+      <div class="vehicle-list" id="vehicle-list" aria-live="polite"></div>
+      <aside class="vehicle-detail" id="vehicle-detail" aria-live="polite"></aside>
+    </section>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="vehicle-social.js"></script>
+  <script src="vehicles.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Designs | Togos Vintage Garage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="designs.css">
+</head>
+<body data-design="classic">
+  <header class="site-header designs-header" data-elevated="true">
+    <a class="brand" href="index.html" aria-label="Togos Vintage Garage home">
+      <span class="brand-mark" aria-hidden="true">TV</span>
+      <span>Togos Vintage Garage</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#community">Community</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="hacks.html">Hacks</a>
+      <a href="maps.html">Maps</a>
+      <a href="designs.html">Designs</a>
+      <a href="features.html">Features</a>
+    </nav>
+    <a class="nav-cta" href="index.html">Open site</a>
+  </header>
+
+  <main class="designs-main">
+    <section class="design-hero" aria-labelledby="design-title">
+      <div>
+        <p class="eyebrow">Design lab</p>
+        <h1 id="design-title">Test different looks for Togos Vintage Garage</h1>
+        <p>Compare a few directions before choosing the final personality for the site: warm clubhouse, 1950s cartoon garage, art deco showroom, brass-era workshop, rally poster, or midnight garage.</p>
+      </div>
+      <div class="design-switcher" aria-label="Design options">
+        <button class="active" type="button" data-design-choice="classic">Classic clubhouse</button>
+        <button type="button" data-design-choice="cartoon">1950s cartoon</button>
+        <button type="button" data-design-choice="deco">Art deco showroom</button>
+        <button type="button" data-design-choice="brass">Brass-era workshop</button>
+        <button type="button" data-design-choice="magazine">Club magazine</button>
+        <button type="button" data-design-choice="dashboard">Workshop dashboard</button>
+        <button type="button" data-design-choice="rally">Rally poster</button>
+        <button type="button" data-design-choice="midnight">Midnight garage</button>
+      </div>
+    </section>
+
+    <section class="design-preview" aria-live="polite">
+      <article class="preview-hero">
+        <div>
+          <p class="eyebrow" id="preview-eyebrow">Classic clubhouse</p>
+          <h2 id="preview-title">Old engines, good roads, and people who show up.</h2>
+          <p id="preview-copy">A warm social garage with member stories, route maps, build logs, and practical help nearby.</p>
+          <div class="preview-actions">
+            <button type="button">Join</button>
+            <button type="button">View route</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="preview-grid">
+        <article>
+          <h3>Route planning</h3>
+          <p>Fuel, cafe, road quality, break stops, hazards, and meetup notes.</p>
+          <div class="mini-route"></div>
+        </article>
+        <article>
+          <h3>Garage profile</h3>
+          <p>Status tags, vehicles, tools, notifications, and owner replies.</p>
+          <div class="mini-profile">
+            <span class="avatar">TG</span>
+            <strong>Working on the car</strong>
+          </div>
+        </article>
+        <article>
+          <h3>Vehicle profile</h3>
+          <p>Health passport, comment thread, route ratings, and build snapshot.</p>
+          <div class="mini-bars"><i></i><i></i><i></i></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="designs.js"></script>
+</body>
+</html>

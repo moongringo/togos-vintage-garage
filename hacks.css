@@ -1,0 +1,325 @@
+.hacks-header {
+  color: var(--ink);
+}
+
+.hacks-main {
+  padding-top: 76px;
+  background: var(--paper);
+}
+
+.hacks-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: end;
+  padding: clamp(72px, 8vw, 116px) clamp(20px, 5vw, 72px) 34px;
+  background:
+    linear-gradient(135deg, rgba(31, 74, 63, 0.14), rgba(201, 125, 37, 0.14)),
+    var(--cream);
+}
+
+.hacks-hero h1 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(3rem, 6.7vw, 7rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.hacks-hero p:not(.eyebrow) {
+  max-width: 820px;
+  color: rgba(22, 21, 19, 0.72);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.hack-warning,
+.hack-card,
+.hack-detail,
+.submit-hack,
+.hack-form label {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 248, 236, 0.82);
+  box-shadow: 0 14px 35px rgba(30, 24, 18, 0.08);
+}
+
+.hack-warning {
+  display: grid;
+  gap: 8px;
+  padding: 20px;
+}
+
+.hack-warning strong {
+  color: var(--burgundy);
+  font-size: 1.4rem;
+}
+
+.hack-warning span {
+  color: rgba(22, 21, 19, 0.68);
+  line-height: 1.55;
+}
+
+.hack-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 22px clamp(20px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 248, 236, 0.78);
+}
+
+.hack-filter {
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0 13px;
+  color: var(--green);
+  background: rgba(31, 74, 63, 0.07);
+  font-weight: 900;
+}
+
+.hack-filter.active {
+  color: var(--cream);
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.hacks-layout {
+  display: grid;
+  grid-template-columns: minmax(310px, 0.78fr) minmax(480px, 1.22fr);
+  gap: 18px;
+  align-items: start;
+  padding: clamp(32px, 5vw, 62px) clamp(20px, 5vw, 72px);
+}
+
+.hack-feed {
+  display: grid;
+  gap: 12px;
+}
+
+.hack-card {
+  display: grid;
+  grid-template-columns: 88px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  width: 100%;
+  padding: 14px;
+  color: var(--ink);
+  text-align: left;
+}
+
+.hack-card.active {
+  color: var(--cream);
+  background: var(--green);
+}
+
+.hack-card.active p,
+.hack-card.active small {
+  color: rgba(255, 248, 236, 0.76);
+}
+
+.hack-thumb,
+.hack-hero-media {
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 68% 30%, rgba(255, 248, 236, 0.82), transparent 18%),
+    linear-gradient(135deg, var(--steel), var(--burgundy));
+}
+
+.hack-thumb {
+  min-height: 76px;
+}
+
+.hack-card h3,
+.hack-card p,
+.hack-detail h2,
+.hack-detail h3 {
+  margin: 0;
+}
+
+.hack-card p,
+.hack-card small {
+  color: rgba(22, 21, 19, 0.66);
+  line-height: 1.45;
+}
+
+.hack-badge {
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: var(--green);
+  background: rgba(31, 74, 63, 0.08);
+  font-size: 0.74rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.hack-card.active .hack-badge {
+  color: var(--ink);
+  background: var(--amber);
+}
+
+.hack-detail {
+  overflow: hidden;
+}
+
+.hack-hero-media {
+  min-height: 260px;
+  display: grid;
+  align-items: end;
+  padding: 18px;
+  color: var(--cream);
+}
+
+.hack-hero-media.video::before {
+  content: "PLAY";
+  display: grid;
+  place-items: center;
+  width: 72px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(22, 21, 19, 0.5);
+  font-weight: 900;
+}
+
+.hack-detail-body {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.hack-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hack-meta span,
+.hack-step,
+.hack-tools span {
+  padding: 7px 9px;
+  border-radius: 999px;
+  color: var(--green);
+  background: rgba(31, 74, 63, 0.09);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.hack-section {
+  display: grid;
+  gap: 10px;
+}
+
+.hack-steps {
+  display: grid;
+  gap: 8px;
+}
+
+.hack-step {
+  border-radius: 8px;
+  color: var(--ink);
+}
+
+.hack-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.risk-box {
+  padding: 14px;
+  border-radius: 8px;
+  color: var(--cream);
+  background: var(--burgundy);
+}
+
+.hack-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hack-actions button,
+.hack-form button {
+  min-height: 42px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 14px;
+  color: var(--cream);
+  background: var(--green);
+  font-weight: 900;
+}
+
+.hack-actions button.secondary {
+  color: var(--ink);
+  background: var(--amber);
+}
+
+.submit-hack {
+  margin: 0 clamp(20px, 5vw, 72px) clamp(48px, 7vw, 86px);
+  padding: clamp(24px, 4vw, 38px);
+}
+
+.hack-form {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 14px;
+}
+
+.hack-form label {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+}
+
+.hack-form label:nth-child(3) {
+  grid-column: span 2;
+}
+
+.hack-form span {
+  color: var(--green);
+  font-weight: 900;
+}
+
+.hack-form input,
+.hack-form select,
+.hack-form textarea {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px;
+  background: white;
+}
+
+.hack-form textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+@media (max-width: 900px) {
+  .hacks-hero,
+  .hacks-layout,
+  .hack-form {
+    grid-template-columns: 1fr;
+  }
+
+  .hack-form label:nth-child(3) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .hacks-main {
+    padding-top: 66px;
+  }
+
+  .hacks-hero {
+    padding-top: 54px;
+  }
+
+  .hack-card {
+    grid-template-columns: 1fr;
+  }
+}

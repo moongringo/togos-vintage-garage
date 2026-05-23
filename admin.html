@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Togos Vintage Garage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar" aria-label="Admin navigation">
+    <a class="brand admin-brand" href="index.html" aria-label="Back to Togos Vintage Garage">
+      <span class="brand-mark" aria-hidden="true">TV</span>
+      <span>Garage Admin</span>
+    </a>
+    <nav class="admin-nav">
+      <button class="admin-nav-item active" type="button" data-admin-view="overview">Dashboard</button>
+      <button class="admin-nav-item" type="button" data-admin-view="members">Members</button>
+      <button class="admin-nav-item" type="button" data-admin-view="moderation">Moderation</button>
+      <button class="admin-nav-item" type="button" data-admin-view="content">Content</button>
+      <button class="admin-nav-item" type="button" data-admin-view="commerce">Merch</button>
+      <button class="admin-nav-item" type="button" data-admin-view="settings">Settings</button>
+    </nav>
+    <div class="admin-side-links">
+      <a class="back-link" href="profiles.html">Profiles</a>
+      <a class="back-link" href="vehicles.html">Vehicles</a>
+      <a class="back-link" href="hacks.html">Hacks</a>
+      <a class="back-link" href="maps.html">Maps</a>
+      <a class="back-link" href="features.html">Feature guide</a>
+      <a class="back-link" href="index.html">Public site</a>
+    </div>
+  </aside>
+
+  <main class="admin-shell">
+    <header class="admin-topbar">
+      <div>
+        <p class="eyebrow">Admin command center</p>
+        <h1>Togos Vintage Garage dashboard</h1>
+      </div>
+      <div class="admin-actions">
+        <button type="button" class="admin-button ghost" id="export-report">Export report</button>
+        <button type="button" class="admin-button" id="save-admin">Save changes</button>
+      </div>
+    </header>
+
+    <section class="admin-view active" data-view="overview" aria-labelledby="overview-title">
+      <div class="admin-section-heading">
+        <h2 id="overview-title">Today at a glance</h2>
+        <p id="admin-status">All systems normal. Community rooms are active and the next ride reminder is queued.</p>
+      </div>
+      <div class="metric-grid">
+        <article class="metric-card">
+          <span>Members</span>
+          <strong id="member-total">58</strong>
+          <small>+4 this week</small>
+        </article>
+        <article class="metric-card">
+          <span>Online now</span>
+          <strong>19</strong>
+          <small>5 private rooms</small>
+        </article>
+        <article class="metric-card urgent">
+          <span>Needs review</span>
+          <strong id="review-count">7</strong>
+          <small>posts, listings, photos</small>
+        </article>
+        <article class="metric-card">
+          <span>Merch votes</span>
+          <strong>126</strong>
+          <small>patch still leads</small>
+        </article>
+      </div>
+
+      <div class="admin-grid">
+        <article class="admin-card wide">
+          <div class="admin-card-top">
+            <h3>Activity trend</h3>
+            <span>Last 7 days</span>
+          </div>
+          <div class="admin-chart" aria-label="Weekly activity bar chart">
+            <i style="--h: 42%"></i>
+            <i style="--h: 68%"></i>
+            <i style="--h: 54%"></i>
+            <i style="--h: 88%"></i>
+            <i style="--h: 72%"></i>
+            <i style="--h: 96%"></i>
+            <i style="--h: 81%"></i>
+          </div>
+        </article>
+        <article class="admin-card">
+          <div class="admin-card-top">
+            <h3>Room health</h3>
+            <span>Live</span>
+          </div>
+          <div class="health-list">
+            <p><b>Shop Talk</b><span>12 online</span></p>
+            <p><b>Ride Plans</b><span>3 reminders</span></p>
+            <p><b>Emergency Help</b><span>0 active alerts</span></p>
+            <p><b>Parts Swap</b><span>2 flagged posts</span></p>
+          </div>
+        </article>
+        <article class="admin-card">
+          <div class="admin-card-top">
+            <h3>Quick actions</h3>
+            <span>Admin</span>
+          </div>
+          <div class="quick-actions">
+            <button type="button" data-admin-note="Ride reminder queued for Sunday coffee run.">Queue ride reminder</button>
+            <button type="button" data-admin-note="Emergency room banner posted for breakdown help format.">Post help banner</button>
+            <button type="button" data-admin-note="Weekly digest drafted for members.">Draft weekly digest</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-view" data-view="members" aria-labelledby="members-title">
+      <div class="admin-section-heading">
+        <h2 id="members-title">Members and approvals</h2>
+        <p>Approve new members, assign skill badges, and review who can access private rooms.</p>
+      </div>
+      <div class="admin-grid">
+        <article class="admin-card wide">
+          <div class="admin-card-top">
+            <h3>Pending members</h3>
+            <span id="pending-count">3 waiting</span>
+          </div>
+          <div class="admin-table" id="approval-list">
+            <div class="table-row">
+              <span><b>Erik N.</b><small>1972 BMW airhead / Oslo West</small></span>
+              <em>Wiring, road routes</em>
+              <button type="button" class="approve-member">Approve</button>
+            </div>
+            <div class="table-row">
+              <span><b>Liv K.</b><small>Classic Volvo Amazon / North</small></span>
+              <em>Upholstery, trim</em>
+              <button type="button" class="approve-member">Approve</button>
+            </div>
+            <div class="table-row">
+              <span><b>Martin S.</b><small>Looking for first project</small></span>
+              <em>Beginner, tools needed</em>
+              <button type="button" class="approve-member">Approve</button>
+            </div>
+          </div>
+        </article>
+        <article class="admin-card">
+          <div class="admin-card-top">
+            <h3>Skill badge mix</h3>
+            <span>Active</span>
+          </div>
+          <div class="badge-matrix">
+            <span>Wiring <b>14</b></span>
+            <span>Carb tuning <b>18</b></span>
+            <span>Paint <b>7</b></span>
+            <span>Welding <b>6</b></span>
+            <span>Upholstery <b>5</b></span>
+            <span>Towing <b>9</b></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-view" data-view="moderation" aria-labelledby="moderation-title">
+      <div class="admin-section-heading">
+        <h2 id="moderation-title">Moderation queue</h2>
+        <p>Review flagged marketplace posts, part photos, chat reports, and emergency room misuse.</p>
+      </div>
+      <div class="admin-grid">
+        <article class="admin-card wide">
+          <div class="admin-card-top">
+            <h3>Needs decision</h3>
+            <span id="flag-count">4 flags</span>
+          </div>
+          <div class="moderation-list">
+            <article>
+              <span class="flag-pill">Marketplace</span>
+              <div>
+                <strong>Suspicious tank badge listing</strong>
+                <p>Members think the badge is reproduction but listed as original.</p>
+              </div>
+              <button type="button" class="resolve-flag">Resolve</button>
+            </article>
+            <article>
+              <span class="flag-pill">Photo</span>
+              <div>
+                <strong>Blurry part ID upload</strong>
+                <p>Ask for dimensions and rear stamping before approving.</p>
+              </div>
+              <button type="button" class="resolve-flag">Resolve</button>
+            </article>
+            <article>
+              <span class="flag-pill">Chat</span>
+              <div>
+                <strong>Off-topic sales pitch</strong>
+                <p>Moved from Ride Plans to Marketplace Watchlist.</p>
+              </div>
+              <button type="button" class="resolve-flag">Resolve</button>
+            </article>
+            <article>
+              <span class="flag-pill">Emergency</span>
+              <div>
+                <strong>Missing location in help request</strong>
+                <p>Prompt member to add location, vehicle, symptom, and tools needed.</p>
+              </div>
+              <button type="button" class="resolve-flag">Resolve</button>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-view" data-view="content" aria-labelledby="content-title">
+      <div class="admin-section-heading">
+        <h2 id="content-title">Content manager</h2>
+        <p>Manage routes, builds, clubs, shops, stories, contests, and spotlight content.</p>
+      </div>
+      <div class="content-grid">
+        <article class="content-tile"><strong>Routes</strong><span>18 saved</span><button type="button">New route</button></article>
+        <article class="content-tile"><strong>Build diaries</strong><span>11 active</span><button type="button">Feature build</button></article>
+        <article class="content-tile"><strong>Trusted shops</strong><span>24 listings</span><button type="button">Add shop</button></article>
+        <article class="content-tile"><strong>Story archive</strong><span>9 stories</span><button type="button">Review story</button></article>
+        <article class="content-tile"><strong>Photo contests</strong><span>42 entries</span><button type="button">Pick winner</button></article>
+        <article class="content-tile"><strong>Sound gallery</strong><span>15 clips</span><button type="button">Moderate clips</button></article>
+      </div>
+    </section>
+
+    <section class="admin-view" data-view="commerce" aria-labelledby="commerce-title">
+      <div class="admin-section-heading">
+        <h2 id="commerce-title">Merch and voting</h2>
+        <p>Track votes, draft products, and keep small-batch orders simple.</p>
+      </div>
+      <div class="admin-grid">
+        <article class="admin-card wide">
+          <div class="admin-card-top">
+            <h3>Merch vote results</h3>
+            <span>Live poll</span>
+          </div>
+          <div class="vote-bars">
+            <span style="--w: 82%"><b>Patch</b><em>48 votes</em></span>
+            <span style="--w: 58%"><b>Garage sign</b><em>34 votes</em></span>
+            <span style="--w: 44%"><b>Shirt</b><em>26 votes</em></span>
+            <span style="--w: 30%"><b>Sticker</b><em>18 votes</em></span>
+          </div>
+        </article>
+        <article class="admin-card">
+          <div class="admin-card-top">
+            <h3>Order snapshot</h3>
+            <span>This month</span>
+          </div>
+          <div class="health-list">
+            <p><b>Revenue</b><span>$742</span></p>
+            <p><b>Open carts</b><span>8</span></p>
+            <p><b>Ready to pack</b><span>12</span></p>
+            <p><b>Low stock</b><span>Mugs</span></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="admin-view" data-view="settings" aria-labelledby="settings-title">
+      <div class="admin-section-heading">
+        <h2 id="settings-title">Site settings</h2>
+        <p>Control privacy, room permissions, emergency help rules, and member onboarding.</p>
+      </div>
+      <div class="settings-grid">
+        <label><input type="checkbox" checked> Require approval before joining private rooms</label>
+        <label><input type="checkbox" checked> Notify admins for emergency help posts</label>
+        <label><input type="checkbox" checked> Hold marketplace posts with red-flag comments</label>
+        <label><input type="checkbox"> Allow public route browsing without an account</label>
+        <label><input type="checkbox" checked> Send weekly digest every Friday</label>
+        <label><input type="checkbox"> Pause merch orders during events</label>
+      </div>
+    </section>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

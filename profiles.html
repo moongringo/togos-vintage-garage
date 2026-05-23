@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garage Profiles | Togos Vintage Garage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="profiles.css">
+</head>
+<body>
+  <header class="site-header profiles-header" data-elevated="true">
+    <a class="brand" href="index.html" aria-label="Togos Vintage Garage home">
+      <span class="brand-mark" aria-hidden="true">TV</span>
+      <span>Togos Vintage Garage</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#community">Community</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="hacks.html">Hacks</a>
+      <a href="maps.html">Maps</a>
+      <a href="index.html#planner">Planner</a>
+      <a href="index.html#hub">Hub</a>
+      <a href="features.html">Features</a>
+    </nav>
+    <a class="nav-cta" href="index.html">Open site</a>
+  </header>
+
+  <main class="profiles-main">
+    <section class="profiles-hero" aria-labelledby="profiles-title">
+      <div>
+        <p class="eyebrow">Garage profiles</p>
+        <h1 id="profiles-title">Social profiles for motor fanatics</h1>
+        <p>Follow members, browse their garage, see build updates, like photos, check tool availability, listen to engine clips, and find people who can help with the exact machine problem in front of you.</p>
+        <div class="profile-hero-actions">
+          <button type="button" data-open-auth="create">Create your profile</button>
+          <button class="secondary" type="button" data-open-auth="login">Login</button>
+        </div>
+      </div>
+      <div class="profile-summary">
+        <strong id="profile-count">6 members</strong>
+        <span>12 vehicles</span>
+        <span>28 skill badges</span>
+        <span>19 shared tools</span>
+      </div>
+    </section>
+
+    <section class="profile-tools" aria-label="Profile filters">
+      <label class="profile-search">
+        <span class="sr-only">Search profiles</span>
+        <input id="profile-search" type="search" placeholder="Search skills, tools, vehicles, or names" autocomplete="off">
+      </label>
+      <div class="filter-row" aria-label="Quick filters">
+        <button class="profile-filter active" type="button" data-filter="all">All</button>
+        <button class="profile-filter" type="button" data-filter="Carb tuning">Carb tuning</button>
+        <button class="profile-filter" type="button" data-filter="Wiring">Wiring</button>
+        <button class="profile-filter" type="button" data-filter="Trailer">Trailer</button>
+        <button class="profile-filter" type="button" data-filter="Oslo">Oslo</button>
+        <button class="profile-filter" type="button" data-filter="Beginner friendly">Beginner friendly</button>
+      </div>
+    </section>
+
+    <section class="profiles-layout" aria-label="Garage profile browser">
+      <div class="member-list" id="member-list" aria-live="polite"></div>
+
+      <aside class="profile-detail" id="profile-detail" aria-live="polite">
+        <div class="empty-profile">
+          <span class="avatar large">TV</span>
+          <h2>Select a garage profile</h2>
+          <p>Choose a member to see a social profile with posts, garage vehicles, photos, tools, build progress, routes, stories, sound clips, and motor-specific help signals.</p>
+        </div>
+      </aside>
+
+      <aside class="profile-chat-sidebar" id="profile-chat-sidebar" aria-live="polite"></aside>
+    </section>
+
+    <section class="profile-roadmap" aria-labelledby="profile-roadmap-title">
+      <div class="section-heading">
+        <p class="eyebrow">Connected next</p>
+        <h2 id="profile-roadmap-title">How profiles support the five-step build</h2>
+      </div>
+      <div class="roadmap-grid">
+        <article><strong>1. Profiles</strong><span>Member identity, vehicles, tools, skills, location, and help preferences.</span></article>
+        <article><strong>2. Build diaries</strong><span>Profiles link to active projects, milestones, costs, problems, and weekly updates.</span></article>
+        <article><strong>3. Planner</strong><span>Profile availability and tools can connect to calendar events, Gantt tasks, and ride plans.</span></article>
+        <article><strong>4. Admin workflow</strong><span>Admins approve profiles, badge skills, moderate listings, and feature member spotlights.</span></article>
+        <article><strong>5. Shared backend</strong><span>Status tags, vehicle comments, owner notifications, map pings, and route markers now start from shared server data.</span></article>
+      </div>
+    </section>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="shared-data.js?v=profile-posts-2"></script>
+  <script src="auth.js?v=profile-posts-2"></script>
+  <script src="vehicle-social.js?v=profile-posts-2"></script>
+  <script src="profiles.js?v=profile-posts-2"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+.vehicle-profile-main {
+  padding-top: 76px;
+  background: var(--paper);
+}
+
+.vehicle-profile-shell {
+  padding: clamp(32px, 5vw, 62px) clamp(20px, 5vw, 72px);
+}
+
+.vehicle-profile-card,
+.comment-card,
+.reply-card,
+.comment-form,
+.profile-notice-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 248, 236, 0.86);
+  box-shadow: 0 12px 28px rgba(30, 24, 18, 0.07);
+}
+
+.vehicle-profile-card {
+  overflow: hidden;
+}
+
+.vehicle-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+  gap: 18px;
+  padding: 18px;
+  background: rgba(246, 239, 228, 0.72);
+}
+
+.vehicle-profile-side,
+.vehicle-comments {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.vehicle-owner-link {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 12px;
+  color: var(--burgundy);
+  font-weight: 900;
+}
+
+.comment-form {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.comment-form textarea,
+.comment-reply-form textarea {
+  width: 100%;
+  min-height: 84px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  resize: vertical;
+  background: white;
+}
+
+.comment-form button,
+.comment-reply-form button,
+.notice-reply-form button {
+  min-height: 40px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 14px;
+  color: var(--cream);
+  background: var(--green);
+  font-weight: 900;
+}
+
+.comment-card {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.comment-card p,
+.reply-card p {
+  margin: 0;
+  color: rgba(22, 21, 19, 0.72);
+  line-height: 1.55;
+}
+
+.comment-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: rgba(22, 21, 19, 0.58);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.reply-list {
+  display: grid;
+  gap: 8px;
+}
+
+.reply-card {
+  padding: 10px;
+  background: rgba(31, 74, 63, 0.08);
+  border-radius: 8px;
+}
+
+.comment-reply-form,
+.notice-reply-form {
+  display: grid;
+  gap: 8px;
+}
+
+.notice-reply-form textarea {
+  min-height: 64px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.profile-notice-card {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.profile-notice-card.unread {
+  border-color: rgba(201, 125, 37, 0.55);
+  box-shadow: 0 0 0 3px rgba(201, 125, 37, 0.13);
+}
+
+.profile-notice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile-notice-actions a,
+.profile-notice-actions button {
+  min-height: 36px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0 12px;
+  color: var(--cream);
+  background: var(--green);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.profile-notice-actions button {
+  background: var(--amber);
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .vehicle-profile-grid {
+    grid-template-columns: 1fr;
+  }
+}

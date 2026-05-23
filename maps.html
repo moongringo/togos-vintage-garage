@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maps | Togos Vintage Garage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="maps.css">
+</head>
+<body data-translation-mode="google">
+  <header class="site-header maps-header" data-elevated="true">
+    <a class="brand notranslate" translate="no" href="index.html" aria-label="Togos Vintage Garage home">
+      <span class="brand-mark" aria-hidden="true">TV</span>
+      <span>Togos Vintage Garage</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html#community">Community</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="hacks.html">Hacks</a>
+      <a href="maps.html">Maps</a>
+      <a href="index.html#planner">Planner</a>
+      <a href="index.html#hub">Hub</a>
+      <a href="features.html">Features</a>
+    </nav>
+    <a class="nav-cta" href="index.html">Open site</a>
+  </header>
+
+  <main class="maps-main">
+    <section class="maps-hero" aria-labelledby="maps-title">
+      <div>
+        <p class="eyebrow">OpenStreetMap garage atlas</p>
+        <h1 id="maps-title">Routes, shops, tools, meetups, and local help on one map</h1>
+        <p>Use free OpenStreetMap previews for ride planning, route quality checks, trusted shop notes, tool lending, emergency help, and meetup pages.</p>
+      </div>
+      <aside class="map-source-card">
+        <strong>Map source</strong>
+        <span>Powered by OpenStreetMap. Each card can open the same area on the full OSM site for deeper exploring.</span>
+        <button class="google-translate-page" id="open-google-translate" type="button">Open this page in Google Translate</button>
+      </aside>
+    </section>
+
+    <section class="map-workbench" aria-labelledby="map-workbench-title">
+      <div class="map-sidebar">
+        <div class="section-heading compact">
+          <p class="eyebrow">Map layers</p>
+          <h2 id="map-workbench-title">Pick a garage map</h2>
+        </div>
+        <div class="map-filters" aria-label="Map category filters">
+          <button class="map-filter active" type="button" data-map-filter="all">All</button>
+          <button class="map-filter" type="button" data-map-filter="Route">Routes</button>
+          <button class="map-filter" type="button" data-map-filter="Shop">Shops</button>
+          <button class="map-filter" type="button" data-map-filter="Tool">Tools</button>
+          <button class="map-filter" type="button" data-map-filter="Meetup">Meetups</button>
+          <button class="map-filter" type="button" data-map-filter="Help">Help</button>
+        </div>
+        <div class="map-list" id="map-list" aria-live="polite"></div>
+      </div>
+
+      <article class="map-stage" aria-live="polite">
+        <div class="map-frame-wrap">
+          <iframe id="garage-map-frame" title="OpenStreetMap preview" loading="lazy"></iframe>
+          <div class="map-pin-layer" id="map-pin-layer" aria-hidden="true"></div>
+        </div>
+        <div class="map-stage-copy">
+          <p class="eyebrow" id="map-kind">Route</p>
+          <h2 id="map-title">Harbor Coffee Loop</h2>
+          <p id="map-description">A relaxed old-bike loop with smooth roads, two fuel stops, and a cafe finish.</p>
+          <dl class="map-stats" id="map-stats"></dl>
+          <div class="map-actions">
+            <a class="map-link" id="map-open-link" href="https://www.openstreetmap.org/#map=12/59.9139/10.7522" target="_blank" rel="noreferrer">Open in OpenStreetMap</a>
+            <button class="map-save" id="map-save" type="button">Save to planner</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="map-planner-panel" aria-labelledby="route-planner-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Route builder</p>
+        <h2 id="route-planner-title">From, to, stops, and map markers</h2>
+        <p>Sketch a route with start point, destination, fuel stops, cafe breaks, tool pickups, photo stops, hazards, and member notes.</p>
+      </div>
+
+      <div class="route-builder-grid">
+        <form class="route-form" id="route-form">
+          <label>
+            <span>From</span>
+            <input id="route-from" type="text" placeholder="Example: Togos Garage">
+          </label>
+          <label>
+            <span>To</span>
+            <input id="route-to" type="text" placeholder="Example: Harbor coffee">
+          </label>
+          <label>
+            <span>Stop or marker</span>
+            <input id="route-stop" type="text" placeholder="Fuel stop, cafe, viewpoint, hazard, tool pickup">
+          </label>
+          <label>
+            <span>Marker type</span>
+            <select id="route-marker-type">
+              <option value="Break">Break</option>
+              <option value="Fuel">Fuel</option>
+              <option value="Cafe">Cafe</option>
+              <option value="Viewpoint">Viewpoint</option>
+              <option value="Hazard">Hazard</option>
+              <option value="Tool">Tool pickup</option>
+              <option value="Shop">Repair shop</option>
+              <option value="Club">Club or meet</option>
+              <option value="Trailer">Trailer help</option>
+              <option value="Parts">Parts pickup</option>
+            </select>
+          </label>
+          <button type="submit">Add route marker</button>
+        </form>
+
+        <div class="marker-board">
+          <div class="marker-board-top">
+            <h3>Route markers</h3>
+            <button type="button" id="use-gps">Use phone GPS</button>
+          </div>
+          <div class="marker-list" id="marker-list" aria-live="polite"></div>
+          <p class="map-status" id="map-status">Use the route marker arrows to reorder stops. GPS pings need browser location permission, and phones usually need HTTPS for live location sharing.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="help-ping-panel" aria-labelledby="help-ping-title">
+      <div class="section-heading compact">
+        <p class="eyebrow">Emergency ping</p>
+        <h2 id="help-ping-title">Add a trouble marker with vehicle notes</h2>
+        <p>Members can share where they are, what happened, and what kind of tools or help they need.</p>
+      </div>
+
+      <form class="help-form" id="help-form">
+        <label>
+          <span>Problem type</span>
+          <select id="help-problem">
+            <option>Breakdown</option>
+            <option>Electrical trouble</option>
+            <option>Fuel issue</option>
+            <option>Flat tire</option>
+            <option>Need trailer</option>
+            <option>Stuck repair</option>
+          </select>
+        </label>
+        <label>
+          <span>Vehicle</span>
+          <input id="help-vehicle" type="text" placeholder="Example: 1974 Honda CB550">
+        </label>
+        <label>
+          <span>Tools or help needed</span>
+          <input id="help-tools" type="text" placeholder="Trailer, jump leads, fuel, timing light, wrench set">
+        </label>
+        <label>
+          <span>Comment</span>
+          <textarea id="help-comment" placeholder="What happened, where are you parked, and is everyone safe?"></textarea>
+        </label>
+        <button type="submit">Add help ping</button>
+      </form>
+      <div class="help-ping-list" id="help-ping-list" aria-live="polite"></div>
+    </section>
+
+    <section class="map-feature-grid" aria-labelledby="map-features-title">
+      <div class="section-heading">
+        <p class="eyebrow">Where maps plug in</p>
+        <h2 id="map-features-title">Map-backed features for the garage</h2>
+      </div>
+      <article>
+        <h3>Route Quality Ratings</h3>
+        <p>Rate each route for potholes, fuel access, cafe stops, scenery, road width, and old-bike friendliness.</p>
+      </article>
+      <article>
+        <h3>Trusted Shops Map</h3>
+        <p>Pin painters, machinists, upholsterers, chromers, mechanics, and parts sellers with member notes.</p>
+      </article>
+      <article>
+        <h3>Tool Availability Map</h3>
+        <p>See who nearby has a compression tester, lift, welder, trailer, timing light, or specialty tool.</p>
+      </article>
+      <article>
+        <h3>Meetup Mode</h3>
+        <p>Create a temporary event page with route, RSVP, fuel stops, weather, emergency contacts, and photo album.</p>
+      </article>
+      <article>
+        <h3>Emergency Help Room</h3>
+        <p>Members can share a map area when they need trailer help, roadside tools, fuel, or local repair advice.</p>
+      </article>
+      <article>
+        <h3>Local Clubs Directory</h3>
+        <p>Show nearby car clubs, bike clubs, swap meets, auctions, shows, and regular coffee gatherings.</p>
+      </article>
+      <article>
+        <h3>Marker ideas</h3>
+        <p>Start, finish, break stop, fuel stop, cafe, hazard, road quality note, tool pickup, trailer access, photo spot, and emergency ping.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="shared-data.js?v=map-logic-1"></script>
+  <script src="maps.js?v=map-logic-1"></script>
+</body>
+</html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Togos Vintage Garage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" data-elevated="false">
+    <a class="brand" href="#top" aria-label="Togos Vintage Garage home">
+      <span class="brand-mark" aria-hidden="true">TV</span>
+      <span>Togos Vintage Garage</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#community">Community</a>
+      <a href="profiles.html">Profiles</a>
+      <a href="vehicles.html">Vehicles</a>
+      <a href="hacks.html">Hacks</a>
+      <a href="maps.html">Maps</a>
+      <a href="#forum">Forum</a>
+      <a href="#planner">Planner</a>
+      <a href="#hub">Hub</a>
+      <a href="features.html">Features</a>
+      <a href="#merch">Merch</a>
+      <a href="#ideas">Ideas</a>
+      <a href="#join" data-open-auth="login">Login</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <a class="nav-cta" href="#join" data-open-auth="create" data-auth-state data-auth-signed-out="Login / Join">Login / Join</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" role="img" aria-label="A warm vintage garage with a classic motorcycle and car"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Classic motorcycles. Old cars. Good company.</p>
+        <h1 id="hero-title">Togos Vintage Garage</h1>
+        <p class="hero-copy">A clubhouse for people who know every old engine has a story, every ride needs a route, and every restoration goes better with a few good friends nearby.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#join" data-open-auth="create">Join the garage</a>
+          <a class="button secondary" href="#forum">Browse threads</a>
+        </div>
+      </div>
+      <div class="hero-strip" aria-label="Garage highlights">
+        <div>
+          <strong>58</strong>
+          <span>local riders</span>
+        </div>
+        <div>
+          <strong>14</strong>
+          <span>parts listings</span>
+        </div>
+        <div>
+          <strong>6</strong>
+          <span>weekend meets</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-band" aria-labelledby="intro-title">
+      <div class="section-heading">
+        <p class="eyebrow">Built for tinkering and talking</p>
+        <h2 id="intro-title">A friendly place to meet people who love the same machines.</h2>
+      </div>
+      <div class="quick-grid">
+        <article>
+          <span class="tile-icon" aria-hidden="true">C</span>
+          <h3>Chat Tonight</h3>
+          <p>Drop into the shop talk room for ride plans, repair advice, and stories from the road.</p>
+        </article>
+        <article>
+          <span class="tile-icon" aria-hidden="true">F</span>
+          <h3>Forum Threads</h3>
+          <p>Keep longer discussions organized by builds, parts, events, and buying advice.</p>
+        </article>
+        <article>
+          <span class="tile-icon" aria-hidden="true">M</span>
+          <h3>Garage Merch</h3>
+          <p>Simple shirts, caps, patches, and mugs for meetups or weekend coffee runs.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section chat-section" id="community" aria-labelledby="community-title">
+      <div class="section-heading">
+        <p class="eyebrow">Community bench</p>
+        <h2 id="community-title">Chat groups for the whole garage</h2>
+        <p>Switch rooms, see who is online, set a status, and send a message. This is still a front-end prototype, but it shows how the real community chat should feel.</p>
+      </div>
+      <div class="community-chat" aria-label="Garage chat groups">
+        <aside class="room-rail" aria-label="Chat groups">
+          <div class="rail-heading">
+            <strong>Groups</strong>
+            <span id="room-count">5 rooms</span>
+          </div>
+          <div class="room-list" id="room-list" role="list">
+            <button class="room-button active" type="button" data-room="0" role="listitem">
+              <span class="room-icon">T</span>
+              <span>
+                <strong>Shop Talk</strong>
+                <small><b>Private</b> Repairs and advice</small>
+              </span>
+              <em>12</em>
+            </button>
+            <button class="room-button" type="button" data-room="1" role="listitem">
+              <span class="room-icon">R</span>
+              <span>
+                <strong>Ride Plans</strong>
+                <small><b>Private</b> Routes and meetups</small>
+              </span>
+              <em>7</em>
+            </button>
+            <button class="room-button" type="button" data-room="2" role="listitem">
+              <span class="room-icon">P</span>
+              <span>
+                <strong>Parts Swap</strong>
+                <small><b>Private</b> Trade and wanted</small>
+              </span>
+              <em>5</em>
+            </button>
+            <button class="room-button" type="button" data-room="3" role="listitem">
+              <span class="room-icon">B</span>
+              <span>
+                <strong>Build Logs</strong>
+                <small><b>Private</b> Restoration diaries</small>
+              </span>
+              <em>9</em>
+            </button>
+            <button class="room-button urgent" type="button" data-room="4" role="listitem">
+              <span class="room-icon">H</span>
+              <span>
+                <strong>Emergency Help</strong>
+                <small><b>Priority</b> Breakdowns and trailer help</small>
+              </span>
+              <em>4</em>
+            </button>
+          </div>
+        </aside>
+
+        <div class="chat-panel">
+          <div class="panel-top">
+            <div>
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>
+                <strong id="active-room-name">Shop Talk</strong>
+                <small id="active-room-blurb">Quick repair questions, tool tips, and bench stories.</small>
+              </span>
+            </div>
+            <span class="room-meta">
+              <span id="room-privacy">Private group</span>
+              <span id="online-count">12 online</span>
+            </span>
+          </div>
+          <div class="messages" id="messages" aria-live="polite"></div>
+          <p class="typing-note" id="typing-note" aria-live="polite">Arne is typing about carb sync.</p>
+          <form class="chat-form" id="chat-form">
+            <label class="sr-only" for="chat-input">Message</label>
+            <input id="chat-input" type="text" placeholder="Message Shop Talk" maxlength="160" autocomplete="off">
+            <button class="ghost-button" id="photo-reply" type="button" aria-pressed="false">Photo</button>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+        <aside class="member-panel" aria-label="Online members">
+          <div class="member-card">
+            <span class="avatar large">TG</span>
+            <div>
+              <strong>Togos Garage</strong>
+              <p id="my-status">In the workshop</p>
+            </div>
+          </div>
+          <div class="status-picker" aria-label="Set your status">
+            <button class="status-choice active" type="button" data-status="In the workshop">Workshop</button>
+            <button class="status-choice" type="button" data-status="Out riding">Riding</button>
+            <button class="status-choice" type="button" data-status="Looking for parts">Parts</button>
+          </div>
+          <form class="custom-status" id="custom-status-form">
+            <label class="sr-only" for="custom-status-input">Custom status</label>
+            <input id="custom-status-input" type="text" placeholder="Custom status" maxlength="32" autocomplete="off">
+            <button type="submit">Set</button>
+          </form>
+          <div class="skill-cloud" aria-label="Skill badges">
+            <strong>Skill badges</strong>
+            <div>
+              <span>Wiring</span>
+              <span>Carb tuning</span>
+              <span>Paint</span>
+              <span>Welding</span>
+              <span>Upholstery</span>
+              <span>Towing</span>
+            </div>
+          </div>
+          <div class="online-list" id="online-list"></div>
+          <div class="chat-ideas">
+            <strong>Built into this prototype</strong>
+            <ul>
+              <li>Private rooms and priority help</li>
+              <li>Photo replies for parts and builds</li>
+              <li>Ride reminders inside chat</li>
+              <li>Online, away, and custom status</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section forum-section" id="forum" aria-labelledby="forum-title">
+      <div class="section-heading">
+        <p class="eyebrow">Forum</p>
+        <h2 id="forum-title">Threads worth pulling up a chair for</h2>
+      </div>
+      <div class="forum-layout">
+        <div class="thread-list" id="thread-list" role="list">
+          <button class="thread active" type="button" data-thread="0" role="listitem">
+            <span class="thread-tag">Restoration</span>
+            <strong>How would you approach a winter rebuild?</strong>
+            <small>23 replies / started by Leif</small>
+          </button>
+          <button class="thread" type="button" data-thread="1" role="listitem">
+            <span class="thread-tag">Parts</span>
+            <strong>Good sources for chrome trim and cable sleeves</strong>
+            <small>11 replies / updated today</small>
+          </button>
+          <button class="thread" type="button" data-thread="2" role="listitem">
+            <span class="thread-tag">Events</span>
+            <strong>Best first spring meetup route?</strong>
+            <small>18 replies / map ideas inside</small>
+          </button>
+        </div>
+        <article class="thread-detail" id="thread-detail" aria-live="polite">
+          <span class="thread-tag">Restoration</span>
+          <h3>How would you approach a winter rebuild?</h3>
+          <p>Start with a shared project log: photos, parts numbers, budget, and one small milestone per week. It gives people a reason to follow along and offer useful advice.</p>
+          <div class="reply-row">
+            <span>Top reply</span>
+            <strong>Make the first post about the story behind the machine.</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section workshop-grid" aria-labelledby="garage-title">
+      <div class="section-heading">
+        <p class="eyebrow">Garage tools</p>
+        <h2 id="garage-title">Ways to bring the community to life</h2>
+      </div>
+      <div class="tool-grid">
+        <article class="tool-card">
+          <h3>Ride Board</h3>
+          <p>Post Sunday loops, scenic routes, coffee stops, weather notes, and who is joining.</p>
+          <button class="small-action" type="button" data-action="route">Plan a route</button>
+        </article>
+        <article class="tool-card">
+          <h3>Parts Swap</h3>
+          <p>List spare tanks, mirrors, manuals, trim, badges, and tools for trade or pickup.</p>
+          <button class="small-action" type="button" data-action="parts">Add a part</button>
+        </article>
+        <article class="tool-card">
+          <h3>Restoration Journal</h3>
+          <p>Track before-and-after photos, jobs done, parts ordered, and advice from members.</p>
+          <button class="small-action" type="button" data-action="journal">Start a journal</button>
+        </article>
+        <article class="tool-card">
+          <h3>Mentor Match</h3>
+          <p>Pair newer owners with experienced mechanics for first-start checks and tune-ups.</p>
+          <button class="small-action" type="button" data-action="mentor">Find a mentor</button>
+        </article>
+      </div>
+      <p class="action-note" id="action-note" aria-live="polite">Pick an idea to sketch the next step.</p>
+    </section>
+
+    <section class="section events-band" aria-labelledby="events-title">
+      <div class="section-heading narrow">
+        <p class="eyebrow">Meetups</p>
+        <h2 id="events-title">Reasons to get out of the garage</h2>
+      </div>
+      <div class="event-list">
+        <article class="event-item">
+          <time datetime="2026-06-07">Jun 7</time>
+          <div>
+            <h3>Coffee and cold starts</h3>
+            <p>Morning meet for first-start checks, tune-ups, and a short town loop.</p>
+          </div>
+          <button type="button" class="rsvp">RSVP</button>
+        </article>
+        <article class="event-item">
+          <time datetime="2026-06-21">Jun 21</time>
+          <div>
+            <h3>Back-road photo run</h3>
+            <p>Classic cars and bikes roll together for photos, lunch, and route notes.</p>
+          </div>
+          <button type="button" class="rsvp">RSVP</button>
+        </article>
+        <article class="event-item">
+          <time datetime="2026-07-12">Jul 12</time>
+          <div>
+            <h3>Parts table Sunday</h3>
+            <p>Bring labeled boxes, manuals, and stories. Trade first, sell second.</p>
+          </div>
+          <button type="button" class="rsvp">RSVP</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section planner-section" id="planner" aria-labelledby="planner-title">
+      <div class="section-heading">
+        <p class="eyebrow">Club planner</p>
+        <h2 id="planner-title">A dashboard for builds, rides, and community momentum</h2>
+        <p>These tools help the group move from chat to action: kanban cards for jobs, a calendar for meetups, a heatmap for activity, a timeline for milestones, and a small Gantt chart for restoration planning.</p>
+      </div>
+
+      <div class="planner-grid">
+        <article class="planner-card kanban-card">
+          <div class="planner-top">
+            <h3>Kanban Board</h3>
+            <span>Build work</span>
+          </div>
+          <div class="kanban-board" aria-label="Restoration kanban board">
+            <div class="kanban-column">
+              <strong>Backlog</strong>
+              <p>Find tank badges</p>
+              <p>Order clutch cable</p>
+            </div>
+            <div class="kanban-column">
+              <strong>In progress</strong>
+              <p>Clean carburetors</p>
+              <p>Trace tail light wire</p>
+            </div>
+            <div class="kanban-column">
+              <strong>Done</strong>
+              <p>Change oil</p>
+              <p>Mount mirrors</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="planner-card calendar-card">
+          <div class="planner-top">
+            <h3>Calendar</h3>
+            <span>June 2026</span>
+          </div>
+          <div class="mini-calendar" aria-label="June calendar">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            <button type="button">1</button><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button class="has-event" type="button">6</button><button class="has-event" type="button">7</button>
+            <button type="button">8</button><button type="button">9</button><button type="button">10</button><button type="button">11</button><button type="button">12</button><button type="button">13</button><button type="button">14</button>
+            <button type="button">15</button><button type="button">16</button><button type="button">17</button><button type="button">18</button><button type="button">19</button><button type="button">20</button><button class="has-event" type="button">21</button>
+            <button type="button">22</button><button type="button">23</button><button type="button">24</button><button type="button">25</button><button type="button">26</button><button type="button">27</button><button type="button">28</button>
+          </div>
+        </article>
+
+        <article class="planner-card">
+          <div class="planner-top">
+            <h3>Activity Heatmap</h3>
+            <span>90 days</span>
+          </div>
+          <div class="heatmap" aria-label="Community activity heatmap">
+            <span style="--level: 1"></span><span style="--level: 2"></span><span style="--level: 3"></span><span style="--level: 1"></span><span style="--level: 4"></span><span style="--level: 2"></span><span style="--level: 3"></span>
+            <span style="--level: 2"></span><span style="--level: 1"></span><span style="--level: 4"></span><span style="--level: 3"></span><span style="--level: 2"></span><span style="--level: 1"></span><span style="--level: 3"></span>
+            <span style="--level: 4"></span><span style="--level: 2"></span><span style="--level: 1"></span><span style="--level: 2"></span><span style="--level: 4"></span><span style="--level: 3"></span><span style="--level: 2"></span>
+            <span style="--level: 1"></span><span style="--level: 3"></span><span style="--level: 2"></span><span style="--level: 4"></span><span style="--level: 1"></span><span style="--level: 2"></span><span style="--level: 3"></span>
+          </div>
+          <p class="planner-note">Shows busy weeks for posts, ride RSVPs, photos, and help requests.</p>
+        </article>
+
+        <article class="planner-card">
+          <div class="planner-top">
+            <h3>Timeline</h3>
+            <span>Milestones</span>
+          </div>
+          <div class="timeline-list">
+            <div><time>Week 1</time><strong>Inventory parts and photos</strong></div>
+            <div><time>Week 2</time><strong>Engine first-start checklist</strong></div>
+            <div><time>Week 3</time><strong>Short test ride and notes</strong></div>
+          </div>
+        </article>
+
+        <article class="planner-card gantt-card">
+          <div class="planner-top">
+            <h3>Gantt Chart</h3>
+            <span>Events + restoration</span>
+          </div>
+          <div class="gantt-stack">
+            <div class="gantt-block">
+              <div class="gantt-title">
+                <strong>Calendar overlap</strong>
+                <span>June weeks</span>
+              </div>
+              <div class="gantt-board event-gantt" aria-label="Calendar event overlap Gantt chart">
+                <div class="gantt-scale" aria-hidden="true">
+                  <span></span><b>W1</b><b>W2</b><b>W3</b><b>W4</b><b>W5</b>
+                </div>
+                <div class="gantt-row">
+                  <strong>Coffee starts</strong>
+                  <i class="event-bar" style="--start: 1; --span: 1"><em>Jun 7</em></i>
+                </div>
+                <div class="gantt-row">
+                  <strong>Photo run</strong>
+                  <i class="event-bar overlap" style="--start: 3; --span: 2"><em>Jun 20-21</em></i>
+                </div>
+                <div class="gantt-row">
+                  <strong>Parts table</strong>
+                  <i class="event-bar overlap" style="--start: 4; --span: 1"><em>Jun 21</em></i>
+                </div>
+                <div class="gantt-row">
+                  <strong>Shop night</strong>
+                  <i class="event-bar" style="--start: 2; --span: 2"><em>Jun 12-18</em></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="gantt-block">
+              <div class="gantt-title">
+                <strong>Restoration plan</strong>
+                <span>Progress</span>
+              </div>
+              <div class="gantt-board restore-gantt" aria-label="Restoration task Gantt chart with progress">
+                <div class="gantt-scale" aria-hidden="true">
+                  <span></span><b>W1</b><b>W2</b><b>W3</b><b>W4</b><b>W5</b>
+                </div>
+                <div class="gantt-row">
+                  <strong>Parts</strong>
+                  <i style="--start: 1; --span: 2; --progress: 70%"><b></b><em>70%</em></i>
+                </div>
+                <div class="gantt-row">
+                  <strong>Wiring</strong>
+                  <i style="--start: 2; --span: 3; --progress: 45%"><b></b><em>45%</em></i>
+                </div>
+                <div class="gantt-row">
+                  <strong>Paint</strong>
+                  <i style="--start: 4; --span: 2; --progress: 20%"><b></b><em>20%</em></i>
+                </div>
+                <div class="gantt-row">
+                  <strong>Road tests</strong>
+                  <i style="--start: 5; --span: 1; --progress: 0%"><b></b><em>0%</em></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section hub-section" id="hub" aria-labelledby="hub-title">
+      <div class="section-heading">
+        <p class="eyebrow">Member hub</p>
+        <h2 id="hub-title">Everything the club needs to keep old machines moving</h2>
+        <p>Profiles, build diaries, routes, tools, shops, stories, voting, maintenance, costs, and helpful people all in one place.</p>
+      </div>
+
+      <div class="hub-grid">
+        <article class="hub-card profile-card">
+          <div class="hub-top">
+            <span class="avatar large">AR</span>
+            <div>
+              <h3>Garage Profiles</h3>
+              <p>Arne, Oslo East</p>
+            </div>
+          </div>
+          <div class="vehicle-line">
+            <strong>1974 Honda CB550</strong>
+            <span>Wiring / carb tuning / timing light</span>
+          </div>
+          <p class="help-line">Happy to help with first-start checks, carb sync, and basic electrical tracing.</p>
+          <div class="badge-row">
+            <span>Compression tester</span>
+            <span>Trailer</span>
+            <span>Metric tools</span>
+          </div>
+          <a class="hub-link" href="profiles.html">Open profiles</a>
+        </article>
+
+        <article class="hub-card diary-card">
+          <div class="hub-top">
+            <h3>Build Diary</h3>
+            <span class="hub-pill">Week 4</span>
+          </div>
+          <div class="photo-pair" aria-label="Before and after restoration photos">
+            <span>Before</span>
+            <span>Now</span>
+          </div>
+          <ul class="compact-list">
+            <li>Milestone: wiring harness labeled</li>
+            <li>Parts: clutch cable, tank badges, fork seals</li>
+            <li>Problem: weak spark on left cylinder</li>
+            <li>Solution: clean ground and test coil</li>
+          </ul>
+        </article>
+
+        <article class="hub-card identify-card">
+          <div class="hub-top">
+            <h3>What Is This Part?</h3>
+            <span class="hub-pill">12 guesses</span>
+          </div>
+          <div class="mystery-part" aria-hidden="true"></div>
+          <p>Upload a photo, add vehicle clues, and let members identify brackets, trim, switches, badges, and mystery hardware.</p>
+          <button class="hub-action" type="button" data-hub-note="Part board idea: add photo upload, machine type, dimensions, stamped numbers, and confidence voting.">Sketch flow</button>
+        </article>
+
+        <article class="hub-card route-card">
+          <div class="hub-top">
+            <h3>Route Library</h3>
+            <span class="hub-pill">Easy</span>
+          </div>
+          <div class="osm-preview route-map" aria-label="OpenStreetMap route preview">
+            <iframe title="OpenStreetMap route preview" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=10.556%2C59.836%2C10.948%2C59.99&amp;layer=mapnik&amp;marker=59.9139%2C10.7522"></iframe>
+            <span>OSM route preview</span>
+          </div>
+          <dl class="route-facts">
+            <div><dt>Fuel</dt><dd>2 stops</dd></div>
+            <div><dt>Roads</dt><dd>Smooth back roads</dd></div>
+            <div><dt>Cafe</dt><dd>Harbor coffee</dd></div>
+          </dl>
+          <a class="hub-link" href="maps.html">Open maps</a>
+        </article>
+
+        <article class="hub-card">
+          <div class="hub-top">
+            <h3>Tool Lending</h3>
+            <span class="hub-pill">Borrow</span>
+          </div>
+          <div class="mini-map-link">
+            <strong>Tool Availability Map</strong>
+            <span>Find nearby lifts, trailers, welders, timing lights, and compression testers.</span>
+            <a href="maps.html">Open OSM map</a>
+          </div>
+          <div class="tool-shelf">
+            <span>Compression tester</span>
+            <span>Timing light</span>
+            <span>Trailer</span>
+            <span>Bike lift</span>
+            <span>Welder</span>
+            <span>Torque wrench</span>
+          </div>
+        </article>
+
+        <article class="hub-card shop-map-card">
+          <div class="hub-top">
+            <h3>Trusted Shops Map</h3>
+            <span class="hub-pill">Local</span>
+          </div>
+          <div class="osm-preview shop-map" aria-label="OpenStreetMap trusted shops preview">
+            <iframe title="OpenStreetMap trusted shops preview" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=10.38%2C59.78%2C10.96%2C60.02&amp;layer=mapnik&amp;marker=59.91%2C10.67"></iframe>
+            <span>OSM shops preview</span>
+          </div>
+          <p>Painters, machinists, upholsterers, chromers, mechanics, and parts sellers with member notes.</p>
+          <a class="hub-link" href="maps.html">Open maps</a>
+        </article>
+
+        <article class="hub-card marketplace-card">
+          <div class="hub-top">
+            <h3>Marketplace Watchlist</h3>
+            <span class="hub-pill warn">Red flags</span>
+          </div>
+          <div class="watch-item">
+            <strong>1968 coupe project</strong>
+            <span>Fair price, missing trim, check rust behind rear arches.</span>
+          </div>
+          <div class="watch-item">
+            <strong>Old tank badges</strong>
+            <span>Likely reproduction. Ask for rear stamping photos.</span>
+          </div>
+        </article>
+
+        <article class="hub-card checklist-card">
+          <div class="hub-top">
+            <h3>First-Start Checklist</h3>
+            <span class="hub-pill" id="checklist-progress">0/6 done</span>
+          </div>
+          <label><input type="checkbox" class="start-check"> Fresh fuel and clean tank</label>
+          <label><input type="checkbox" class="start-check"> Oil level and filter checked</label>
+          <label><input type="checkbox" class="start-check"> Battery charged</label>
+          <label><input type="checkbox" class="start-check"> Spark confirmed</label>
+          <label><input type="checkbox" class="start-check"> Brakes roll and stop</label>
+          <label><input type="checkbox" class="start-check"> Fire extinguisher nearby</label>
+        </article>
+
+        <article class="hub-card directory-card">
+          <div class="hub-top">
+            <h3>Local Clubs Directory</h3>
+            <span class="hub-pill">Nearby</span>
+          </div>
+          <ul class="compact-list">
+            <li>Sunday Classics Car Club</li>
+            <li>Vintage Twin Riders</li>
+            <li>Monthly swap meet</li>
+            <li>Summer hill climb show</li>
+          </ul>
+        </article>
+
+        <article class="hub-card story-card">
+          <div class="hub-top">
+            <h3>Story Archive</h3>
+            <span class="hub-pill">Audio + text</span>
+          </div>
+          <blockquote>"My first bike leaked oil, smoked at idle, and still made every errand feel like an adventure."</blockquote>
+          <p>Collect first rides, best road trips, worst repairs, and family machine stories.</p>
+        </article>
+
+        <article class="hub-card contest-card">
+          <div class="hub-top">
+            <h3>Photo Contests</h3>
+            <span class="hub-pill">This month</span>
+          </div>
+          <div class="contest-grid">
+            <span>Best dashboard</span>
+            <span>Best patina</span>
+            <span>Cleanest engine bay</span>
+            <span>Oldest running machine</span>
+          </div>
+        </article>
+
+        <article class="hub-card cost-card">
+          <div class="hub-top">
+            <h3>Restoration Cost Tracker</h3>
+            <span class="hub-pill">$1,275</span>
+          </div>
+          <div class="cost-bars">
+            <span style="--w: 68%"><b>Parts</b><em>$680</em></span>
+            <span style="--w: 36%"><b>Paint</b><em>$360</em></span>
+            <span style="--w: 18%"><b>Tools</b><em>$180</em></span>
+            <span style="--w: 8%"><b>Surprises</b><em>$55</em></span>
+          </div>
+        </article>
+
+        <article class="hub-card mentor-card">
+          <div class="hub-top">
+            <h3>Mentor Matching</h3>
+            <span class="hub-pill">3 matches</span>
+          </div>
+          <p>Pair beginners with experienced members by machine type, skill, tools, location, and preferred way to help.</p>
+          <button class="hub-action" type="button" data-hub-note="Mentor matcher idea: match member profile skills against build diary problems and nearby availability.">Find mentor</button>
+        </article>
+
+        <article class="hub-card log-card">
+          <div class="hub-top">
+            <h3>Maintenance Logs</h3>
+            <span class="hub-pill">Due soon</span>
+          </div>
+          <ul class="compact-list">
+            <li>Oil change: 220 miles</li>
+            <li>Valve check: next month</li>
+            <li>Winter storage: checklist ready</li>
+            <li>Tires: inspect sidewalls</li>
+          </ul>
+        </article>
+
+        <article class="hub-card challenge-card">
+          <div class="hub-top">
+            <h3>Club Challenges</h3>
+            <span class="hub-pill" id="challenge-count">18 joined</span>
+          </div>
+          <p>Ride 100 miles this month, fix one small thing, or post a build update.</p>
+          <button class="hub-action" id="join-challenge" type="button">Join challenge</button>
+        </article>
+
+        <article class="hub-card vote-card">
+          <div class="hub-top">
+            <h3>Merch Voting</h3>
+            <span class="hub-pill" id="vote-result">Patch leads</span>
+          </div>
+          <div class="vote-options">
+            <button type="button" data-vote="Shirt">Shirt</button>
+            <button type="button" data-vote="Patch">Patch</button>
+            <button type="button" data-vote="Sticker">Sticker</button>
+            <button type="button" data-vote="Garage sign">Sign</button>
+          </div>
+        </article>
+
+        <article class="hub-card spotlight-card">
+          <div class="hub-top">
+            <span class="avatar large">TG</span>
+            <div>
+              <h3>Member Spotlight</h3>
+              <p>Togos Garage and the old green coupe</p>
+            </div>
+          </div>
+          <p>Feature one member and their machine every month with photos, stories, favorite roads, and lessons learned.</p>
+        </article>
+
+        <article class="hub-card sound-card">
+          <div class="hub-top">
+            <h3>Sound Gallery</h3>
+            <span class="hub-pill">Engine notes</span>
+          </div>
+          <div class="sound-bars" aria-label="Engine start sound waveform">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <p>Upload engine starts, idle clips, exhaust notes, horns, and before-after tuning sounds.</p>
+        </article>
+      </div>
+      <p class="action-note" id="hub-note" aria-live="polite">Pick a hub action to sketch the next build step.</p>
+    </section>
+
+    <section class="section merch-section" id="merch" aria-labelledby="merch-title">
+      <div class="section-heading">
+        <p class="eyebrow">Merch counter</p>
+        <h2 id="merch-title">Small-batch garage goods</h2>
+      </div>
+      <div class="cart-bar" aria-live="polite">
+        <span>Cart</span>
+        <strong id="cart-count">0 items</strong>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-art shirt" aria-hidden="true"></div>
+          <h3>Shop Night Tee</h3>
+          <p>Heavy cotton, back print, oil-friendly black.</p>
+          <div class="product-bottom">
+            <strong>$28</strong>
+            <button type="button" class="add-cart">Add</button>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-art cap" aria-hidden="true"></div>
+          <h3>Patch Cap</h3>
+          <p>Canvas cap with a stitched garage badge.</p>
+          <div class="product-bottom">
+            <strong>$24</strong>
+            <button type="button" class="add-cart">Add</button>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-art mug" aria-hidden="true"></div>
+          <h3>Cold Start Mug</h3>
+          <p>Big enamel-style mug for bench coffee.</p>
+          <div class="product-bottom">
+            <strong>$18</strong>
+            <button type="button" class="add-cart">Add</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section ideas-section" id="ideas" aria-labelledby="ideas-title">
+      <div class="section-heading">
+        <h2 id="ideas-title">Brainstorm board</h2>
+      </div>
+      <div class="ideas-list">
+        <article>
+          <span>01</span>
+          <h3>Owner profiles</h3>
+          <p>Let members share their current bike or car, dream machine, skill level, and what they can help with.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Build of the month</h3>
+          <p>Feature one restoration with photos, mistakes, costs, tools used, and member comments.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Local mechanic map</h3>
+          <p>Pin trusted upholsterers, painters, machinists, welders, and parts counters.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>Story nights</h3>
+          <p>Host a monthly video hangout where people show one part, one photo, and one memory.</p>
+        </article>
+        <article>
+          <span>05</span>
+          <h3>Help request board</h3>
+          <p>Quick posts for stuck bolts, wiring mysteries, trailer help, and first-start nerves.</p>
+        </article>
+        <article>
+          <span>06</span>
+          <h3>Marketplace watchlist</h3>
+          <p>Members can flag good finds, suspicious listings, and fair prices for classic parts.</p>
+        </article>
+        <article>
+          <span>07</span>
+          <h3>Skill badges</h3>
+          <p>Let members show what they know: wiring, paint, upholstery, carb tuning, welding, towing, and route planning.</p>
+        </article>
+        <article>
+          <span>08</span>
+          <h3>Garage radio</h3>
+          <p>Add always-on chat rooms for shop talk, ride planning, parts alerts, build logs, and local emergency help.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Togos Vintage Garage</strong>
+      <p>Made for old engines, weekend rides, and people who like to keep good things running.</p>
+    </div>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script src="shared-data.js?v=auth-private-1"></script>
+  <script src="auth.js?v=auth-private-1"></script>
+  <script src="script.js?v=auth-private-1"></script>
+</body>
+</html>

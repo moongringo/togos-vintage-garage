@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "memberId": "mogge-1778776516473",
+      "name": "Mogge",
+      "passwordSalt": "4191be5763b39d877b1512737f39e262",
+      "passwordHash": "93c5d00274b935d2d4e5873e880878955b9667dfad761813a722ae29c3be5a30bc748c8989266f237d47f443134fc4ab58113a52ee05ecab86e914eedc51ad35",
+      "createdAt": 1778788124362
+    }
+  ]
+}

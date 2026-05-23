@@ -1,0 +1,395 @@
+.designs-header {
+  color: var(--ink);
+}
+
+.designs-main {
+  min-height: 100vh;
+  padding-top: 76px;
+  background: var(--paper);
+}
+
+.design-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: end;
+  padding: clamp(72px, 8vw, 116px) clamp(20px, 5vw, 72px) 38px;
+  background: var(--cream);
+}
+
+.design-hero h1 {
+  max-width: 980px;
+  margin: 0;
+  font-size: clamp(3rem, 6.4vw, 6.8rem);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+.design-hero p:not(.eyebrow) {
+  max-width: 780px;
+  color: rgba(22, 21, 19, 0.72);
+  line-height: 1.7;
+}
+
+.design-switcher {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 248, 236, 0.82);
+  box-shadow: 0 14px 35px rgba(30, 24, 18, 0.08);
+}
+
+.design-switcher button,
+.preview-actions button {
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 0 12px;
+  color: var(--green);
+  background: white;
+  font-weight: 900;
+}
+
+.design-switcher button.active,
+.preview-actions button:first-child {
+  color: var(--cream);
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.design-preview {
+  padding: clamp(32px, 5vw, 62px) clamp(20px, 5vw, 72px);
+}
+
+.preview-hero {
+  min-height: 430px;
+  display: grid;
+  align-items: end;
+  padding: clamp(24px, 5vw, 58px);
+  border-radius: 8px;
+  color: var(--cream);
+  background:
+    linear-gradient(90deg, rgba(18, 17, 15, 0.82), rgba(18, 17, 15, 0.24)),
+    url("assets/garage-hero.png") center / cover;
+}
+
+.preview-hero h2 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 5.6rem);
+  line-height: 0.98;
+}
+
+.preview-hero p:not(.eyebrow) {
+  max-width: 620px;
+  color: rgba(255, 248, 236, 0.82);
+  line-height: 1.65;
+}
+
+.preview-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.preview-grid article {
+  min-height: 210px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 248, 236, 0.86);
+  box-shadow: 0 14px 35px rgba(30, 24, 18, 0.08);
+}
+
+.preview-grid h3,
+.preview-grid p {
+  margin: 0;
+}
+
+.preview-grid p {
+  margin-top: 8px;
+  color: rgba(22, 21, 19, 0.68);
+  line-height: 1.55;
+}
+
+.mini-route,
+.mini-profile,
+.mini-bars {
+  margin-top: 18px;
+}
+
+.mini-route {
+  height: 62px;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 22% 52%, var(--amber) 0 7px, transparent 8px),
+    radial-gradient(circle at 76% 44%, var(--burgundy) 0 7px, transparent 8px),
+    linear-gradient(105deg, transparent 0 38%, var(--green) 38% 43%, transparent 43%),
+    rgba(31, 74, 63, 0.08);
+}
+
+.mini-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mini-profile strong {
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--burgundy);
+  background: rgba(201, 125, 37, 0.12);
+}
+
+.mini-bars {
+  display: grid;
+  gap: 8px;
+}
+
+.mini-bars i {
+  height: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--green), var(--amber));
+}
+
+.mini-bars i:nth-child(2) {
+  width: 72%;
+}
+
+.mini-bars i:nth-child(3) {
+  width: 46%;
+}
+
+body[data-design="dashboard"] {
+  --paper: #eef1ef;
+  --cream: #ffffff;
+  --green: #245047;
+  --burgundy: #33404a;
+  --amber: #d19a3b;
+}
+
+body[data-design="dashboard"] .preview-hero {
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.64)),
+    url("assets/garage-hero.png") center / cover;
+}
+
+body[data-design="dashboard"] .preview-hero p:not(.eyebrow) {
+  color: rgba(22, 21, 19, 0.7);
+}
+
+body[data-design="cartoon"] {
+  --paper: #f9e7bc;
+  --cream: #fff7d8;
+  --ink: #1b2126;
+  --green: #16806b;
+  --burgundy: #d63a3a;
+  --amber: #f6b733;
+  --steel: #55a6c7;
+  --line: rgba(27, 33, 38, 0.34);
+}
+
+body[data-design="cartoon"] .design-hero,
+body[data-design="cartoon"] .preview-grid article,
+body[data-design="cartoon"] .design-switcher {
+  border: 3px solid var(--ink);
+  background: var(--cream);
+  box-shadow: 8px 8px 0 var(--ink);
+}
+
+body[data-design="cartoon"] .design-hero h1,
+body[data-design="cartoon"] .preview-hero h2 {
+  font-family: Impact, Haettenschweiler, "Arial Black", sans-serif;
+  text-transform: uppercase;
+}
+
+body[data-design="cartoon"] .preview-hero {
+  border: 4px solid var(--ink);
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 17% 25%, rgba(246, 183, 51, 0.92) 0 10%, transparent 11%),
+    radial-gradient(circle at 80% 20%, rgba(255, 247, 216, 0.9) 0 8%, transparent 9%),
+    linear-gradient(135deg, rgba(22, 128, 107, 0.88), rgba(85, 166, 199, 0.88)),
+    url("assets/garage-hero.png") center / cover;
+  box-shadow: 10px 10px 0 var(--ink);
+}
+
+body[data-design="cartoon"] .preview-hero p:not(.eyebrow) {
+  max-width: 660px;
+  color: rgba(27, 33, 38, 0.82);
+  font-weight: 800;
+}
+
+body[data-design="cartoon"] .preview-actions button,
+body[data-design="cartoon"] .design-switcher button {
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+body[data-design="cartoon"] .preview-grid article {
+  transform: rotate(var(--tilt, -1deg));
+}
+
+body[data-design="cartoon"] .preview-grid article:nth-child(2) {
+  --tilt: 1.2deg;
+}
+
+body[data-design="cartoon"] .preview-grid article:nth-child(3) {
+  --tilt: -0.5deg;
+}
+
+body[data-design="deco"] {
+  --paper: #eee5d2;
+  --cream: #fbf4df;
+  --ink: #15191c;
+  --green: #173f3c;
+  --burgundy: #7c272d;
+  --amber: #c9a24d;
+  --line: rgba(21, 25, 28, 0.18);
+}
+
+body[data-design="deco"] .preview-hero {
+  color: var(--cream);
+  background:
+    linear-gradient(90deg, rgba(21, 25, 28, 0.86), rgba(23, 63, 60, 0.44)),
+    repeating-linear-gradient(90deg, rgba(201, 162, 77, 0.24) 0 2px, transparent 2px 46px),
+    url("assets/garage-hero.png") center / cover;
+}
+
+body[data-design="deco"] .preview-hero h2,
+body[data-design="deco"] .design-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  text-transform: uppercase;
+}
+
+body[data-design="deco"] .preview-grid article {
+  border-top: 5px solid var(--amber);
+}
+
+body[data-design="brass"] {
+  --paper: #e7dcc4;
+  --cream: #fff8e8;
+  --ink: #211b14;
+  --green: #3f563d;
+  --burgundy: #7e3e2f;
+  --amber: #b58948;
+  --steel: #6f6b5d;
+}
+
+body[data-design="brass"] .preview-hero {
+  color: var(--cream);
+  background:
+    linear-gradient(90deg, rgba(33, 27, 20, 0.88), rgba(126, 62, 47, 0.34)),
+    url("assets/garage-hero.png") center / cover;
+  filter: sepia(0.18);
+}
+
+body[data-design="brass"] .preview-grid article,
+body[data-design="brass"] .design-switcher,
+body[data-design="brass"] .design-hero {
+  background:
+    linear-gradient(90deg, rgba(181, 137, 72, 0.08) 1px, transparent 1px),
+    var(--cream);
+  background-size: 22px 22px;
+}
+
+body[data-design="brass"] .preview-grid h3::before {
+  content: "Filed note";
+  display: block;
+  margin-bottom: 8px;
+  color: var(--burgundy);
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+body[data-design="magazine"] {
+  --paper: #f2eee6;
+  --cream: #fffdf7;
+  --ink: #101010;
+  --green: #304d42;
+  --burgundy: #9a2c2b;
+  --amber: #c9872d;
+}
+
+body[data-design="magazine"] .preview-hero {
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(255, 253, 247, 0.95), rgba(255, 253, 247, 0.54)),
+    url("assets/garage-hero.png") center / cover;
+}
+
+body[data-design="magazine"] .preview-hero h2,
+body[data-design="magazine"] .design-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+body[data-design="magazine"] .preview-hero p:not(.eyebrow) {
+  color: rgba(16, 16, 16, 0.72);
+  column-count: 2;
+  column-gap: 24px;
+}
+
+body[data-design="magazine"] .preview-grid article {
+  border-radius: 0;
+  box-shadow: none;
+  border-top: 2px solid var(--ink);
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+body[data-design="rally"] {
+  --paper: #f4eee4;
+  --cream: #fff9ec;
+  --green: #0f3f36;
+  --burgundy: #a22d2f;
+  --amber: #efb231;
+}
+
+body[data-design="rally"] .preview-hero {
+  background:
+    linear-gradient(110deg, rgba(162, 45, 47, 0.9) 0 42%, rgba(15, 63, 54, 0.8) 42% 100%),
+    url("assets/garage-hero.png") center / cover;
+}
+
+body[data-design="midnight"] {
+  --paper: #141719;
+  --cream: #202528;
+  --ink: #f4efe5;
+  --green: #6fb39a;
+  --burgundy: #d06b70;
+  --amber: #f1b84f;
+  --line: rgba(244, 239, 229, 0.16);
+}
+
+body[data-design="midnight"] .design-hero,
+body[data-design="midnight"] .preview-grid article,
+body[data-design="midnight"] .design-switcher {
+  background: #202528;
+}
+
+body[data-design="midnight"] .design-hero p:not(.eyebrow),
+body[data-design="midnight"] .preview-grid p {
+  color: rgba(244, 239, 229, 0.7);
+}
+
+@media (max-width: 900px) {
+  .design-hero,
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "vehicleComments": [],
+  "profileNotifications": [],
+  "profileStatusTags": {},
+  "helpPings": [],
+  "routeMarkers": [],
+  "garageMembers": [
+    {
+      "id": "togo-1778777053643",
+      "name": "Togo",
+      "initials": "T",
+      "location": "Sverige",
+      "status": "In the workshop",
+      "intro": "New garage member ready to meet people, share progress, and keep old machines moving.",
+      "vehicles": [
+        "Guzzi"
+      ],
+      "skills": [
+        "Beginner friendly"
+      ],
+      "tools": [
+        "Basic tools"
+      ],
+      "helps": [
+        "Learning together"
+      ],
+      "build": "New member garage setup",
+      "maintenance": "First maintenance log pending",
+      "route": "Local shakedown route",
+      "story": "New profile created at Togos Vintage Garage.",
+      "createdAt": 1778777053644
+    },
+    {
+      "id": "mogge-1778776516473",
+      "name": "Mogge",
+      "initials": "M",
+      "location": "Oslo",
+      "status": "In the workshop",
+      "intro": "New garage member ready to meet people, share progress, and keep old machines moving.",
+      "vehicles": [
+        "Honda"
+      ],
+      "skills": [
+        "Beginner friendly"
+      ],
+      "tools": [
+        "Basic tools"
+      ],
+      "helps": [
+        "Learning together"
+      ],
+      "build": "New member garage setup",
+      "maintenance": "First maintenance log pending",
+      "route": "Local shakedown route",
+      "story": "New profile created at Togos Vintage Garage.",
+      "createdAt": 1778776516473,
+      "qrCode": "tvg:mogge"
+    }
+  ],
+  "chatMessages": {},
+  "memberStatuses": {},
+  "privateChats": [
+    {
+      "id": "mogge-1778776516473__togo-1778777053643",
+      "participants": [
+        "mogge-1778776516473",
+        "togo-1778777053643"
+      ],
+      "names": [
+        "Mogge",
+        "Togo"
+      ],
+      "messages": [
+        {
+          "authorId": "mogge-1778776516473",
+          "author": "Mogge",
+          "text": "hei nu testar jag igjen",
+          "createdAt": "21:49"
+        }
+      ],
+      "invitedAt": 1778787105771
+    },
+    {
+      "id": "mogge-1778776516473__tg-demo",
+      "participants": [
+        "mogge-1778776516473",
+        "tg-demo"
+      ],
+      "names": [
+        "Mogge",
+        "Togos Garage"
+      ],
+      "messages": [],
+      "invitedAt": 1778787056073
+    }
+  ],
+  "chatInvites": [
+    {
+      "id": "invite-1778787107206",
+      "fromId": "mogge-1778776516473",
+      "fromName": "Mogge",
+      "toId": "togo-1778777053643",
+      "toName": "Togo",
+      "status": "pending",
+      "createdAt": "14.5.2026, 21:31:47"
+    },
+    {
+      "id": "invite-1778787095404",
+      "fromId": "mogge-1778776516473",
+      "fromName": "Mogge",
+      "toId": "tg-demo",
+      "toName": "Togos Garage",
+      "status": "pending",
+      "createdAt": "14.5.2026, 21:31:35"
+    }
+  ],
+  "friendLinks": [],
+  "garageChallenges": [],
+  "challengeInvites": [],
+  "privateChatReads": {
+    "mogge-1778776516473": {
+      "mogge-1778776516473__togo-1778777053643": 1
+    }
+  },
+  "feedReactions": {},
+  "profilePosts": []
+}
